@@ -1,0 +1,73 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <button type="button" class="navbar-toggler navbar-toggler-right"
+          (click)="isCollapsed = !isCollapsed">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="/">
+    <img src="/assets/images/agri.png" width="80" class="d-inline-block align-top" alt="">
+  </a>
+  <div class="navbar-collapse" (collapsed)="collapsed($event)" (expanded)="expanded($event)"
+       [collapse]="isCollapsed" id="navbarDropdown">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-sm-center" href="/">首頁 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-sm-center" href="/developers">開發者專區</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-sm-center" href="/support">技術支援</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-sm-center" href="javascript:void(0)" data-href="/register">註冊</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-sm-center" href="/login">登入</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-sm-center" href="javascript:void(0)">english</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!--<nav class="navbar navbar-toggleable-md navbar-light bg-faded">-->
+
+<!--<button class="navbar-toggler navbar-toggler-right (click)=" isCollapsed=!isCollapsed" type="button"-->
+<!--data-toggle="collapse"-->
+<!--data-target="#navbarDropdown" aria-controls="navbarDropdown" aria-expanded="false"-->
+<!--aria-label="Toggle navigation">-->
+<!--<span class="navbar-toggler-icon"></span>-->
+<!--</button>-->
+<!--<a class="navbar-brand" href="/">-->
+<!--<images src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">-->
+<!--AGRI-->
+<!--</a>-->
+<!--<div class="navbar-collapse" (collapsed)="collapsed($event)" (expanded)="expanded($event)"-->
+<!--[collapse]="isCollapsed" id="navbarDropdown">-->
+<!--<ul class="navbar-nav mr-auto">-->
+<!--<li class="nav-item active">-->
+<!--<a class="nav-link" href="/">首頁 <span class="sr-only">(current)</span></a>-->
+<!--</li>-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" href="/developers">開發者專區</a>-->
+<!--</li>-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" href="/support">技術支援</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--<ul class="navbar-nav">-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" href="javascript:void(0)" data-href="/register">註冊</a>-->
+<!--</li>-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" href="/login">登入</a>-->
+<!--</li>-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" href="javascript:void(0)">english</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</nav>-->
