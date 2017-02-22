@@ -1,29 +1,36 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {HttpModule} from '@angular/http';
+import { Router } from '@angular/router';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/header/header.component';
-import { HomeComponent } from './main/home/home.component';
+import {AppRoutingModule} from './app.routes';
+import {AppComponent} from './app.component';
 
-import { CollapseModule } from 'ng2-bootstrap';
-import { FooterComponent } from './shared/footer/footer.component';
+import {MainModule} from "./main/main.module";
+import {HeaderComponent} from './shared/header/header.component';
+import {HomeComponent} from './main/home/home.component';
+import {FooterComponent} from './shared/footer/footer.component';
+import { SupportComponent } from './main/support/support.component';
+import { DeveloperComponent } from './main/developer/developer.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent,
-    FooterComponent
+    AppComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    CollapseModule.forRoot()
+    AppRoutingModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(router: Router) {
+    console.log('Routes: ', JSON.stringify(router.config, undefined, 2));
+  }
+}
