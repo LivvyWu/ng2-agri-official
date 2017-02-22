@@ -1,30 +1,19 @@
-import { NgModule }     from '@angular/core';
-import {
-  RouterModule, Routes,
-} from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
-import { SupportComponent } from './support/support.component';
-import { DeveloperComponent } from './developer/developer.component';
+import { ModuleWithProviders } from "@angular/core";
 
-const appRoutes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'main', component:MainComponent},
-  { path: 'home', component: HomeComponent},
-  { path: 'developer', component: DeveloperComponent},
-  { path: 'support', component: SupportComponent}
+export const routes: Routes = [
+  { path: 'main',
+    component: MainComponent,
+    children: [
+      { path: '', redirectTo: 'home', pathMatch: 'full'},
+      { path: 'home', loadChildren: 'app/main/home/home.module#HomeModule'},
+      { path: 'developer', loadChildren: 'app/main/developer/developer.module#DeveloperModule'},
+      { path: 'support', loadChildren: 'app/main/support/support.module#SupportModule'}
+
+    ]
+  }
 ];
-@NgModule({
-  imports: [
-    RouterModule.forRoot(
-      appRoutes
-    )
-  ],
-  exports: [
-    RouterModule
-  ],
-  providers: [
 
-  ]
-})
-export class MainRoutingModule {}
+
+export const routing: ModuleWithProviders = RouterModule.forChild(routes);

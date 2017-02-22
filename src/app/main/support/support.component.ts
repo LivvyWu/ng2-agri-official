@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {TabsModule} from "ng2-tabs";
 
 @Component({
   selector: 'support',
