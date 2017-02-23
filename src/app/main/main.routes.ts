@@ -3,7 +3,7 @@ import { MainComponent } from './main.component';
 import { ModuleWithProviders } from "@angular/core";
 
 export const routes: Routes = [
-  { path: 'main',
+  { path: 'index',
     component: MainComponent,
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full'},

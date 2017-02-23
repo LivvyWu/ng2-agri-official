@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { routing } from "./app.routes";
 import { MainModule } from "./main/main.module";
 import { LoginComponent } from "./login/login.component";
+import { RegisterComponent } from './register/register.component';
+import { DocsComponent } from './docs/docs.component';
 
 @NgModule({
     imports: [
@@ -18,7 +20,9 @@ import { LoginComponent } from "./login/login.component";
     ],
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    DocsComponent
 
   ],
   providers: [],
